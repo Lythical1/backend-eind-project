@@ -18,14 +18,14 @@ session_start();
 <body>
     <?php include_once "navbar.php" ?>
 
-    <div class="container text-center">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-4">Find Your Next Job or Employee</h1>
-                <p class="lead">Jobspot is the best place to find your next job or employee. With thousands of job listings
-                    and resumes, we make it easy to find the perfect match.</p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
-            </div>
+
+    <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+            <h1 class="display-4">Find Your Next Job or Employee</h1>
+            <p class="lead">Jobspot is the best place to find your next job or employee. <br>
+                With thousands of job listings and resumes, we make it easy to find the perfect match.
+            </p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
         </div>
     </div>
 
