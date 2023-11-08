@@ -3,8 +3,8 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
@@ -18,15 +18,8 @@
                 <a class="nav-link" href="#">About Us</a>
             </li>
         </ul>
+        <!-- <div class="form-inline my-2 my-lg-0">
+            <button id="dark-mode-toggle" class="btn btn-outline-dark my-2 my-sm-0" type="button">Toggle Dark Mode</button>
+        </div> -->
     </div>
-    <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="darkModeSwitch">
-        <label class="form-check-label" for="darkModeSwitch">Dark Mode</label>
-    </div>
-    <script>
-        const darkModeSwitch = document.querySelector('#darkModeSwitch');
-        darkModeSwitch.addEventListener('change', () => {
-            document.body.classList.toggle('dark-mode');
-        });
-    </script>
 </nav>

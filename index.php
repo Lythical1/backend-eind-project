@@ -1,10 +1,7 @@
 <?php
-$dark_mode = isset($_COOKIE['dark_mode']) && $_COOKIE['dark_mode'] === 'true';
-if ($dark_mode) {
-    $theme_class = 'dark-mode';
-} else {
-    $theme_class = '';
-}
+
+session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -21,12 +18,14 @@ if ($dark_mode) {
 <body>
     <?php include_once "navbar.php" ?>
 
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4">Find Your Next Job or Employee</h1>
-            <p class="lead">Jobspot is the best place to find your next job or employee. With thousands of job listings
-                and resumes, we make it easy to find the perfect match.</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
+    <div class="container text-center">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Find Your Next Job or Employee</h1>
+                <p class="lead">Jobspot is the best place to find your next job or employee. With thousands of job listings
+                    and resumes, we make it easy to find the perfect match.</p>
+                <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
+            </div>
         </div>
     </div>
 
@@ -60,26 +59,8 @@ if ($dark_mode) {
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
-
-    <script>
-        $(document).ready(function () {
-            var darkMode = <?php echo $dark_mode ? 'true' : 'false'; ?>;
-            var html = $('html');
-            var toggleDarkMode = function () {
-                darkMode = !darkMode;
-                if (darkMode) {
-                    html.addClass('dark-mode');
-                    document.cookie = 'dark_mode=true';
-                } else {
-                    html.removeClass('dark-mode');
-                    document.cookie = 'dark_mode=false';
-                }
-            };
-            $('#dark-mode-toggle').click(toggleDarkMode);
-        });
-    </script>
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>
