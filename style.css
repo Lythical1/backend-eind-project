@@ -1,0 +1,12 @@
+nav {
+    justify-content: center;
+}
+
+.dark-mode {
+    background-color: #363333;
+    color: #fff;
+}
+
+.dark-mode a {
+    color: #fff;
+}
