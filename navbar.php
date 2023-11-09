@@ -21,5 +21,13 @@
         <!-- <div class="form-inline my-2 my-lg-0">
             <button id="dark-mode-toggle" class="btn btn-outline-dark my-2 my-sm-0" type="button">Toggle Dark Mode</button>
         </div> -->
+        <div>
+            <?php if (isset($_SESSION['user_id'])) { ?>
+                <a href="logout.php" class="btn btn-outline-danger">Logout</a>
+            <?php } else { ?>
+                <a href="login.php" class="btn btn-outline-primary">Login</a>
+                <a href="register.php" class="btn btn-outline-success">Register</a>
+            <?php } ?>
+        </div>
     </div>
 </nav>

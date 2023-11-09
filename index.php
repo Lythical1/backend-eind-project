@@ -35,19 +35,19 @@ session_start();
                 <h2>Find Jobs</h2>
                 <p>Search thousands of job listings from top companies in your area. Filter by location, salary, and
                     more to find the perfect job for you.</p>
-                <a class="btn btn-secondary" href="#" role="button">Find Jobs</a>
+                <a class="btn btn-secondary" href="find_job.php" role="button">Find Jobs</a>
             </div>
             <div class="col-md-4">
                 <h2>Find Employees</h2>
                 <p>Post your job listing and get matched with qualified candidates. Filter by experience, education, and
                     more to find the perfect employee for your company.</p>
-                <a class="btn btn-secondary" href="#" role="button">Find Employees</a>
+                <a class="btn btn-secondary" href="find_employee.php" role="button">Find Employees</a>
             </div>
             <div class="col-md-4">
                 <h2>About Us</h2>
                 <p>Learn more about Jobspot and our mission to connect job seekers with employers. Read our story and
                     meet our team.</p>
-                <a class="btn btn-secondary" href="#" role="button">About Us</a>
+                <a class="btn btn-secondary" href="about_us.php" role="button">About Us</a>
             </div>
         </div>
     </div>
