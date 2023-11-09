@@ -14,19 +14,7 @@ try {
     echo "Connection failed: " . $e->getMessage();
 }
 
-try {
-    $dsn = "mysql:host=$host;dbname=$dbname";
-    $user = $username;
-    $pass = $password;
-    $options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
-
-    $pdo = new PDO($dsn, $user, $pass, $options);
-} catch (\PDOException $e) {
-    throw new \PDOException($e->getMessage(), (int) $e->getCode());
-}
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
     $password = $_POST['password'];
     $email = $_POST['email'];
     $user_type = $_POST['user_type'];
@@ -35,20 +23,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $company_name = $_POST['company_name'];
 
     try {
-        // Create a PDO instance
-        $pdo = new PDO($dsn, $user, $pass, $options);
-
         // Prepare the SQL statement
-        $sql = "INSERT INTO users (username, password, email, type_of_user, first_name, last_name, company_name)
-                VALUES (:name, :password, :email, :user_type, :first_name, :last_name, :company_name)";
+        $sql = "INSERT INTO users (email, password, type_of_user, first_name, last_name, company_name)
+                VALUES (:email, :password, :user_type, :first_name, :last_name, :company_name)";
 
         $stmt = $pdo->prepare($sql);
 
         // Hash the password
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-        // Bind parameters
-        $stmt->bindParam(':name', $name);
+        // Bind parameters to statement variable
         $stmt->bindParam(':password', $hashedPassword);
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':user_type', $user_type);

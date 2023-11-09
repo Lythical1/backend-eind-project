@@ -16,12 +16,12 @@ try {
 
 $notification = "";
 
-if (!empty($_POST['username']) && !empty($_POST['password'])) {
-    $username = $_POST['username'];
+if (!empty($_POST['email']) && !empty($_POST['password'])) {
+    $email = $_POST['email'];
     $password = $_POST['password'];
-    $stmt = $pdo->prepare('SELECT id, password FROM users WHERE username = :username');
+    $stmt = $pdo->prepare('SELECT id, password FROM users WHERE email = :email');
 
-    $stmt->execute(['username' => $username]);
+    $stmt->execute(['email' => $email]);
     $result = $stmt->fetch();
 
     if ($result && $password === $result['password']) {
@@ -29,7 +29,7 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
         header("Location: index.php");
         exit;
     } else {
-        $notification = "Username or password is incorrect.";
+        $notification = "Email or password is incorrect.";
     }
 }
 
@@ -93,8 +93,8 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
                     <div class="card-body">
                         <form action="" method="post">
                             <div class="form-group">
-                                <label for="username">Username:</label>
-                                <input type="text" class="form-control" id="username" name="username" required>
+                                <label for="email">email:</label>
+                                <input type="text" class="form-control" id="email" name="email" required>
                             </div>
                             <div class="form-group">
                                 <label for="password">Password:</label>
