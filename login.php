@@ -14,6 +14,8 @@ try {
     echo "Connection failed: " . $e->getMessage();
 }
 
+$notification = "";
+
 if (!empty($_POST['username']) && !empty($_POST['password'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -27,7 +29,7 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
         header("Location: index.php");
         exit;
     } else {
-        echo "Incorrect username or password";
+        $notification = "Username or password is incorrect.";
     }
 }
 
@@ -100,6 +102,9 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
                             </div>
                             <div class="form-group text-center">
                                 <button type="submit" class="btn btn-primary btn-block">Login</button>
+                            </div>
+                            <div>
+                                <p class="text-center"><?php echo $notification; ?></p>
                             </div>
                         </form>
                     </div>

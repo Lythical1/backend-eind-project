@@ -26,7 +26,7 @@
                 <a href="logout.php" class="btn btn-outline-danger">Logout</a>
             <?php } else { ?>
                 <a href="login.php" class="btn btn-outline-primary">Login</a>
-                <a href="register.php" class="btn btn-outline-success">Register</a>
+                <a href="create_account.php" class="btn btn-outline-success">Register</a>
             <?php } ?>
         </div>
     </div>
