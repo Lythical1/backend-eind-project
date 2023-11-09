@@ -3,7 +3,7 @@
 session_start();
 
 $host = "localhost";
-$dbname = "netland";
+$dbname = "jobspot";
 $username = "bit_academy";
 $password = "bit_academy";
 
