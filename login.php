@@ -83,6 +83,8 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
 </head>
 
 <body>
+    <?php include_once "navbar.php" ?>
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -104,7 +106,9 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
                                 <button type="submit" class="btn btn-primary btn-block">Login</button>
                             </div>
                             <div>
-                                <p class="text-center"><?php echo $notification; ?></p>
+                                <p class="text-center">
+                                    <?php echo $notification; ?>
+                                </p>
                             </div>
                         </form>
                     </div>
