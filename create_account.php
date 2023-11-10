@@ -23,7 +23,7 @@ session_start();
                         <h4>Create Account</h4>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="account_creation.php">
+                        <form method="POST" action="account_creation_handler.php">
 
                             <div class="form-group">
                                 <label for="email">Email:</label>

@@ -36,7 +36,7 @@ try {
             <p class="lead">Jobspot is the best place to find your next job or employee. <br>
                 With thousands of job listings and resumes, we make it easy to find the perfect match.
             </p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
+            <a class="btn btn-primary btn-lg" href="create_account.php" role="button">Get Started</a>
         </div>
     </div>
 
