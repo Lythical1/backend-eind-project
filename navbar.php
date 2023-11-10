@@ -1,21 +1,21 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Jobspot</a>
+    <a class="navbar-brand" href="index.php">Jobspot</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
         <ul class="navbar-nav mx-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Find Jobs</a>
+                <a class="nav-link" href="find_job.php">Find Jobs</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Find Employees</a>
+                <a class="nav-link" href="find_employee.php">Find Employees</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="about_us.php">About Us</a>
             </li>
         </ul>
         <!-- <div class="form-inline my-2 my-lg-0">

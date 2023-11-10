@@ -25,7 +25,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
     $result = $stmt->fetch();
 
     if ($result && $password === $result['password']) {
-        $_SESSION['loggedInUser'] = $result['id'];
+        $_SESSION['user_id'] = $result['id'];
         header("Location: index.php");
         exit;
     } else {
@@ -116,7 +116,10 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
             </div>
         </div>
     </div>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
