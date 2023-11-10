@@ -42,82 +42,33 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Login Page</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .card {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border: none;
-            border-radius: 10px;
-            width: 100%;
-            max-width: 400px;
-            margin: 0 auto;
-            float: none;
-        }
-
-        .card-header {
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-            border-radius: 10px 10px 0 0;
-            padding: 15px;
-        }
-
-        .btn-primary {
-            background-color: #007bff;
-            border: none;
-        }
-
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.7/tailwind.min.css">
 </head>
 
-<body>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h2>Login</h2>
-                    </div>
-                    <div class="card-body">
-                        <form action="" method="post">
-                            <div class="form-group">
-                                <label for="email">email:</label>
-                                <input type="text" class="form-control" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Password:</label>
-                                <input type="password" class="form-control" id="password" name="password" required>
-                            </div>
-                            <div class="form-group text-center">
-                                <button type="submit" class="btn btn-primary btn-block">Login</button>
-                            </div>
-                            <div>
-                                <p class="text-center">
-                                    <?php echo $notification; ?>
-                                </p>
-                            </div>
-                        </form>
-                    </div>
+<body class="bg-gray-100">
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="max-w-md w-full bg-white shadow-lg rounded-lg p-8">
+            <h2 class="text-2xl font-bold mb-8">Login</h2>
+            <form action="" method="post">
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 font-bold mb-2">Email:</label>
+                    <input type="text" class="border border-gray-400 p-2 w-full rounded-md" id="email" name="email" required>
                 </div>
-            </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-gray-700 font-bold mb-2">Password:</label>
+                    <input type="password" class="border border-gray-400 p-2 w-full rounded-md" id="password" name="password" required>
+                </div>
+                <div class="mb-4">
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700">Login</button>
+                </div>
+                <div>
+                    <p class="text-center text-red-500">
+                        <?php echo $notification; ?>
+                    </p>
+                </div>
+            </form>
         </div>
     </div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 </body>
 
 </html>
