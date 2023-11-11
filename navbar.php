@@ -1,33 +1,23 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="index.php">Jobspot</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="find_job.php">Find Jobs</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="find_employee.php">Find Employees</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="about_us.php">About Us</a>
-            </li>
-        </ul>
-        <!-- <div class="form-inline my-2 my-lg-0">
-            <button id="dark-mode-toggle" class="btn btn-outline-dark my-2 my-sm-0" type="button">Toggle Dark Mode</button>
-        </div> -->
-        <div>
-            <?php if (isset($_SESSION['user_id'])) { ?>
-                <a href="logout.php" class="btn btn-outline-danger">Logout</a>
-            <?php } else { ?>
-                <a href="login.php" class="btn btn-outline-primary">Login</a>
-                <a href="create_account.php" class="btn btn-outline-success">Register</a>
-            <?php } ?>
+<nav class="bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <div class="flex-shrink-0 flex items-center">
+                <a href="index.php" class="text-gray-900 text-2xl font-bold">Jobspot</a>
+            </div>
+            <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                <a href="index.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-500 focus:outline-none focus:text-gray-500">Home</a>
+                <a href="find_job.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-500 focus:outline-none focus:text-gray-500">Find Jobs</a>
+                <a href="find_employee.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-500 focus:outline-none focus:text-gray-500">Find Employees</a>
+                <a href="about_us.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-500 focus:outline-none focus:text-gray-500">About Us</a>
+            </div>
+            <div class="flex items-center">
+                <?php if (isset($_SESSION['user_id'])) { ?>
+                    <a href="logout.php" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">Logout</a>
+                <?php } else { ?>
+                    <a href="login.php" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 mr-2">Login</a>
+                    <a href="create_account.php" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">Register</a>
+                <?php } ?>
+            </div>
         </div>
     </div>
 </nav>
