@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 include_once "connector.php";
 
 $notification = "";
@@ -14,7 +12,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
     $stmt->execute(['email' => $email]);
     $result = $stmt->fetch();
 
-    if ($result && $password === $result['password']) {
+    if ($result && password_verify($password, $result['password'])) {
         $_SESSION['user_id'] = $result['id'];
         header("Location: index.php");
         exit;

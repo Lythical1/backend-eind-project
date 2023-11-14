@@ -1,13 +1,9 @@
 <?php
-
-session_start();
-
 include_once "connector.php";
-
 ?>
 
 <!DOCTYPE html>
-<html lang="en" class="<?php echo $theme_class; ?>">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -61,17 +57,19 @@ include_once "connector.php";
     <div class="bg-gray-50">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-3xl font-extrabold text-gray-900">
-                    Find Jobs
-                </h2>
-                <p class="mt-4 text-lg text-gray-500">
-                    Search thousands of job listings from top companies in your area. Filter by location, salary, and
-                    more to find the perfect job for you.
-                </p>
-                <a href="find_job.php"
-                    class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 sm:w-auto">
-                    Find Jobs
-                </a>
+                <div class="bg-white rounded p-8 shadow-md">
+                    <h2 class="text-3xl font-extrabold text-gray-900">
+                        Find Jobs
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-500">
+                        Search thousands of job listings from top companies in your area. Filter by location, salary, and
+                        more to find the perfect job for you.
+                    </p>
+                    <a href="find_job.php"
+                        class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 sm:w-auto">
+                        Find Jobs
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -79,17 +77,19 @@ include_once "connector.php";
     <div class="bg-white">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-3xl font-extrabold text-gray-900">
-                    Find Employees
-                </h2>
-                <p class="mt-4 text-lg text-gray-500">
-                    Post your job listing and get matched with qualified candidates. Filter by experience, education,
-                    and more to find the perfect employee for your company.
-                </p>
-                <a href="find_employee.php"
-                    class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 sm:w-auto">
-                    Find Employees
-                </a>
+                <div class="bg-white rounded p-8 shadow-md">
+                    <h2 class="text-3xl font-extrabold text-gray-900">
+                        Find Employees
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-500">
+                        Post your job listing and get matched with qualified candidates. Filter by experience, education,
+                        and more to find the perfect employee for your company.
+                    </p>
+                    <a href="find_employee.php"
+                        class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 sm:w-auto">
+                        Find Employees
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -97,17 +97,19 @@ include_once "connector.php";
     <div class="bg-gray-50">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-3xl font-extrabold text-gray-900">
-                    About Us
-                </h2>
-                <p class="mt-4 text-lg text-gray-500">
-                    Learn more about Jobspot and our mission to connect job seekers with employers. Read our story and
-                    meet our team.
-                </p>
-                <a href="about_us.php"
-                    class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 sm:w-auto">
-                    About Us
-                </a>
+                <div class="bg-white rounded p-8 shadow-md">
+                    <h2 class="text-3xl font-extrabold text-gray-900">
+                        About Us
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-500">
+                        Learn more about Jobspot and our mission to connect job seekers with employers. Read our story and
+                        meet our team.
+                    </p>
+                    <a href="about_us.php"
+                        class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 sm:w-auto">
+                        About Us
+                    </a>
+                </div>
             </div>
         </div>
     </div>

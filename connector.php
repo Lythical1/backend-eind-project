@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $host = "localhost";
 $dbname = "jobspot";
 $username = "bit_academy";
