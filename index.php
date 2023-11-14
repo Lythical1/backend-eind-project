@@ -37,18 +37,18 @@ include_once "connector.php";
                     </div>
                 </div>
                 <div class="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
-                    <svg class="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
-                        width="784" height="404" fill="none" viewBox="0 0 784 404">
+                    <svg class="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden" width="784"
+                        height="404" fill="none" viewBox="0 0 784 404">
                         <defs>
-                            <pattern id="e80155a9-dfde-425a-b5ea-1f6fadd20131" x="0" y="0" width="20"
-                                height="20" patternUnits="userSpaceOnUse">
-                                <rect x="0" y="0" width="4" height="4" class="text-gray-200"
-                                    fill="currentColor" />
+                            <pattern id="e80155a9-dfde-425a-b5ea-1f6fadd20131" x="0" y="0" width="20" height="20"
+                                patternUnits="userSpaceOnUse">
+                                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
                             </pattern>
                         </defs>
                         <rect width="784" height="404" fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)" />
                     </svg>
-                    <img class="relative mx-auto" width="490" src="https://tailwindui.com/img/component-images/full-width-with-sidebar.jpg" alt="">
+                    <img class="relative mx-auto" width="490"
+                        src="https://tailwindui.com/img/component-images/full-width-with-sidebar.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -57,12 +57,13 @@ include_once "connector.php";
     <div class="bg-gray-50">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center">
-                <div class="bg-white rounded p-8 shadow-md">
+                <div class="border rounded-lg p-8 shadow-md">
                     <h2 class="text-3xl font-extrabold text-gray-900">
                         Find Jobs
                     </h2>
                     <p class="mt-4 text-lg text-gray-500">
-                        Search thousands of job listings from top companies in your area. Filter by location, salary, and
+                        Search thousands of job listings from top companies in your area. Filter by location, salary,
+                        and
                         more to find the perfect job for you.
                     </p>
                     <a href="find_job.php"
@@ -77,12 +78,13 @@ include_once "connector.php";
     <div class="bg-white">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center">
-                <div class="bg-white rounded p-8 shadow-md">
+                <div class="border rounded-lg p-8 shadow-md">
                     <h2 class="text-3xl font-extrabold text-gray-900">
                         Find Employees
                     </h2>
                     <p class="mt-4 text-lg text-gray-500">
-                        Post your job listing and get matched with qualified candidates. Filter by experience, education,
+                        Post your job listing and get matched with qualified candidates. Filter by experience,
+                        education,
                         and more to find the perfect employee for your company.
                     </p>
                     <a href="find_employee.php"
@@ -97,12 +99,13 @@ include_once "connector.php";
     <div class="bg-gray-50">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center">
-                <div class="bg-white rounded p-8 shadow-md">
+                <div class="border rounded-lg p-8 shadow-md">
                     <h2 class="text-3xl font-extrabold text-gray-900">
                         About Us
                     </h2>
                     <p class="mt-4 text-lg text-gray-500">
-                        Learn more about Jobspot and our mission to connect job seekers with employers. Read our story and
+                        Learn more about Jobspot and our mission to connect job seekers with employers. Read our story
+                        and
                         meet our team.
                     </p>
                     <a href="about_us.php"
