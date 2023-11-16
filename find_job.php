@@ -69,7 +69,7 @@ $result = $pdo->query($sql);
 $job_cards = "";
 if ($result->rowCount() > 0) {
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-        $job_cards .= '<div class="bg-white rounded-lg shadow-lg p-4 mb-4 cursor-pointer" onclick="showDetails(' . $row[" id"]
+        $job_cards .= '<div class="bg-white rounded-lg shadow-lg p-4 mb-4 cursor-pointer" onclick="showDetails(' . $row["id"]
             . ')" x-data="{ showDetails: false }">';
         $job_cards .= '<h2 class="text-lg font-bold mb-2">' . $row["company_name"]
             . '</h2>';
