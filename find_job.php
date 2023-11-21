@@ -1,6 +1,21 @@
 <?php
 
 include_once "connector.php";
+
+
+try {
+    $sql = "SELECT id, company_name, field, job_type, location, hours_per_week, hourly_rate FROM job_postings";
+    $result = $pdo->query($sql);
+
+    // Loop through the job information and create detailed job information for each job
+    if ($result->rowCount() > 0) {
+        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+
+        }
+    }
+} catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
 ?>
 
 <!DOCTYPE html>
@@ -102,31 +117,30 @@ if ($result->rowCount() > 0) {
         <div class="w-2/3 p-4" x-show="showDetails">
             <!-- Detailed job information component -->
             <div class="bg-white rounded-lg shadow-lg p-4 mb-4">
-                <?php
-                try {
-                    $sql = "SELECT id, company_name, field, job_type, location, hours_per_week, hourly_rate FROM job_postings";
-                    $result = $pdo->query($sql);
 
-                    // Loop through the job information and create detailed job information for each job
-                    if ($result->rowCount() > 0) {
-                        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                ?>
-                                <div id="job-details-<?= $row["id"]; ?>" class="job-details" style="display: none;">
-                                <h2 class="text-lg font-bold mb-2"><?= $row["company_name"]; ?></h2>
-                                <p class="text-gray-700 mb-2"><?= $row["field"]; ?></p>
-                                <p class="text-gray-700 mb-2"><?= $row["job_type"]; ?></p>
-                                <p class="text-gray-700 mb-2"><?= $row["location"]; ?></p>
-                                <p class="text-gray-700 mb-2"><?= $row["hours_per_week"]; ?> hours per week</p>
-                                <p class="text-gray-700 mb-2">$<?= $row["hourly_rate"]; ?> per hour</p>
-                            </div>
-                <?php
-                        }
-                    }
-                } catch (PDOException $e) {
-                    echo "Connection failed: " . $e->getMessage();
-                }
-                ?>
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-lg" @click="showDetails = false">Close Details</button>
+                <div id="job-details-<?= $row["id"]; ?>" class="job-details" style="display: none;">
+                    <h2 class="text-lg font-bold mb-2">
+                        <?= $row["company_name"]; ?>
+                    </h2>
+                    <p class="text-gray-700 mb-2">
+                        <?= $row["field"]; ?>
+                    </p>
+                    <p class="text-gray-700 mb-2">
+                        <?= $row["job_type"]; ?>
+                    </p>
+                    <p class="text-gray-700 mb-2">
+                        <?= $row["location"]; ?>
+                    </p>
+                    <p class="text-gray-700 mb-2">
+                        <?= $row["hours_per_week"]; ?> hours per week
+                    </p>
+                    <p class="text-gray-700 mb-2">$
+                        <?= $row["hourly_rate"]; ?> per hour
+                    </p>
+                </div>
+
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-lg" @click="showDetails = false">Close
+                    Details</button>
             </div>
         </div>
     </div>
