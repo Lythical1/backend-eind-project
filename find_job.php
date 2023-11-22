@@ -61,7 +61,7 @@ if ($result->rowCount() > 0) {
 
     <div class="flex">
         <!-- Left div with job cards -->
-        <div class="w-1/3 p-4">
+        <div class="w-1/3 p-4" style="overflow:scroll; height:800px;">
             <?= $job_cards; ?>
         </div>
         <!-- Right div with detailed job information -->

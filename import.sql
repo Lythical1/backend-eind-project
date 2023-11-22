@@ -1,4 +1,6 @@
-CREATE DATABASE IF NOT EXISTS jobspot;
+DROP DATABASE IF EXISTS jobspot;
+
+CREATE DATABASE jobspot;
 
 USE jobspot;
 
@@ -11,7 +13,8 @@ CREATE TABLE IF NOT EXISTS job_postings (
   job_type VARCHAR(255) NOT NULL,
   location VARCHAR(255) NOT NULL,
   hours_per_week INT NOT NULL,
-  hourly_rate DECIMAL(10,2) NOT NULL
+  hourly_rate DECIMAL(10,2) NOT NULL,
+  description VARCHAR(255) NOT NULL
 );
 
 DROP TABLE IF EXISTS users;
