@@ -2,7 +2,7 @@
 
 include_once "connector.php";
 
-$sql = "SELECT id, company_name, field, job_type, location, hours_per_week, hourly_rate FROM job_postings";
+$sql = "SELECT id, company_name, field, job_type, location, hours_per_week, hourly_rate, description FROM job_postings";
 $result = $pdo->query($sql);
 
 // Loop through the job information and create a job card for each job
@@ -20,7 +20,6 @@ if ($result->rowCount() > 0) {
             $row["location"] . '</p>';
         $job_cards .= '<p class="text-gray-700 mb-2">' . $row["hours_per_week"]
             . ' hours per week</p>';
-        $job_cards .= '<p class="text-gray-700 mb-2">$' . $row["hourly_rate"] . ' per hour</p>';
         $job_cards
             .= '<button class="bg-blue-500 text-white px-4 py-2 rounded-lg" @click="showDetails = true">View Details</button>';
         $job_cards .= '</div>';
@@ -70,9 +69,8 @@ if ($result->rowCount() > 0) {
             <div class="bg-white rounded-lg shadow-lg p-4 mb-4">
                 <?php
                 try {
-                    $sql = "SELECT id, company_name, field, job_type, location, hours_per_week, hourly_rate FROM job_postings";
+                    $sql = "SELECT id, company_name, field, job_type, location, hours_per_week, hourly_rate, description FROM job_postings";
                     $result = $pdo->query($sql);
-
                     // Loop through the job information and create detailed job information for each job
                     if ($result->rowCount() > 0) {
                         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
@@ -96,6 +94,8 @@ if ($result->rowCount() > 0) {
                                 <p class="text-gray-700 mb-2">$
                                     <?= $row["hourly_rate"]; ?> per hour
                                 </p>
+                                <p class="text-gray-700 mb-2">
+                                    <?= $row["description"]; ?>
                             </div>
                             <?php
                         }
