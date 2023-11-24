@@ -64,7 +64,7 @@ if ($result->rowCount() > 0) {
             <?= $job_cards; ?>
         </div>
         <!-- Right div with detailed job information -->
-        <div class="w-2/3 p-4" x-show="showDetails">
+        <div class="w-2/3 p-4" x-show="showDetails" style="display: flex; justify-content: center; align-items: center;">
             <!-- Detailed job information component -->
             <div class="bg-white rounded-lg shadow-lg p-4 mb-4">
                 <?php
@@ -104,8 +104,6 @@ if ($result->rowCount() > 0) {
                     echo "Connection failed: " . $e->getMessage();
                 }
                 ?>
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-lg" @click="showDetails = false">Close
-                    Details</button>
             </div>
         </div>
     </div>
