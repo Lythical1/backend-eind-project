@@ -41,7 +41,7 @@ $result = $pdo->query($sql);
 
     <div class="flex">
         <!-- Left div with job cards -->
-        <div class="w-1/3 p-4" style="overflow:scroll; height:800px; margin-left:50px;">
+        <div class="w-1/3 p-4" style="overflow:scroll; height:93vh; margin-left:50px;">
             <?php if ($result->rowCount() > 0): ?>
                 <?php while ($row = $result->fetch(PDO::FETCH_ASSOC)): ?>
                     <div class="bg-white rounded-lg shadow-lg p-4 mb-4 cursor-pointer" onclick="showDetails(<?= $row['id']; ?>)"
