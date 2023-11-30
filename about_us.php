@@ -10,7 +10,7 @@ include_once "connector.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - JobSpot</title>
+    <title>About Us - Jobspot</title>
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.15/tailwind.min.css">
 <style>
@@ -26,8 +26,8 @@ include_once "connector.php";
     <?php include_once "navbar.php" ?>
 
     <main class="container mx-auto py-8 px-4">
-        <h2 class="text-center text-4xl font-bold mb-4 text-indigo-700">Welcome to JobSpot</h2>
-        <p class="text-center text-lg mb-8 text-gray-700">Here at JobSpot, we are revolutionizing the job search experience. We
+        <h2 class="text-center text-4xl font-bold mb-4 text-indigo-700">Welcome to Jobspot</h2>
+        <p class="text-center text-lg mb-8 text-gray-700">Here at Jobspot, we are revolutionizing the job search experience. We
             understand the importance of finding the perfect match between talented individuals and forward-thinking
             companies.</p>
 
@@ -60,7 +60,7 @@ include_once "connector.php";
             </div>
         </div>
 
-        <p class="text-center text-xl font-bold mt-8 mb-4 text-indigo-700">"JobSpot: Igniting Careers, Connecting Futures"</p>
+        <p class="text-center text-xl font-bold mt-8 mb-4 text-indigo-700">"Jobspot: Igniting Careers, Connecting Futures"</p>
     </main>
 
 </body>
