@@ -12,8 +12,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         // Prepare the SQL statement
-        $sql = "INSERT INTO users (email, password, type_of_user, first_name, last_name, company_name)
-                VALUES (:email, :password, :user_type, :first_name, :last_name, :company_name)";
+        $sql = "INSERT INTO users (email, password, phone_number, type_of_user, first_name, last_name, company_name, company_size, industry, website)
+                VALUES (:email, :password, :phone_number, :user_type, :first_name, :last_name, :company_name, :company_size, :industry, :website)";
 
         $stmt = $pdo->prepare($sql);
 
@@ -23,10 +23,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Bind parameters to statement variable
         $stmt->bindParam(':password', $hashedPassword);
         $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':phone_number', $phone_number);
         $stmt->bindParam(':user_type', $user_type);
         $stmt->bindParam(':first_name', $first_name);
         $stmt->bindParam(':last_name', $last_name);
         $stmt->bindParam(':company_name', $company_name);
+        $stmt->bindParam(':company_size', $company_size);
+        $stmt->bindParam(':industry', $industry);
+        $stmt->bindParam(':website', $website);
+
 
         // Execute the statement
         $stmt->execute();
