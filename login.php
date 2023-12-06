@@ -7,13 +7,14 @@ $notification = "";
 if (!empty($_POST['email']) && !empty($_POST['password'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $stmt = $pdo->prepare('SELECT id, password FROM users WHERE email = :email');
+    $stmt = $pdo->prepare('SELECT id, password, type_of_user FROM users WHERE email = :email');
 
     $stmt->execute(['email' => $email]);
     $result = $stmt->fetch();
 
     if ($result && password_verify($password, $result['password'])) {
         $_SESSION['user_id'] = $result['id'];
+        $_SESSION['type_of_user'] = $result['type_of_user'];
         header("Location: index.php");
         exit;
     } else {
