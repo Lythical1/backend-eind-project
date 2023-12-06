@@ -38,9 +38,9 @@ session_start();
                             </div>
 
                             <div>
-                                <label for="phone_numnber" class="block mb-2 font-semibold text-gray-700">Phone
+                                <label for="phone_number" class="block mb-2 font-semibold text-gray-700">Phone
                                     Number:</label>
-                                <input type="text" id="phone_number" name="phone_number"
+                                <input type="tel" id="phone_number" name="phone_number" pattern="[0-9]{2} [0-9]{8}"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
                             </div>
 
