@@ -81,7 +81,7 @@ session_start();
                                     <label for="company_size" class="block mb-2 font-semibold text-gray-700">Company
                                         Size:</label>
                                     <select name="company_size" id="company_size"
-                                        class="form-select w-full px-4 py-2 rounded-lg border border-gray-400" required>
+                                        class="form-select w-full px-4 py-2 rounded-lg border border-gray-400">
                                         <option value="">Select Company Size</option>
                                         <option value="1-50">1-50</option>
                                         <option value="51-100">51-100</option>
@@ -98,11 +98,11 @@ session_start();
                                 </div>
                                 <div>
                                     <label for="webiste" class="block mb-2 font-semibold text-gray-700">Webiste:</label>
-                                    <input type="text" id="webiste" name="webiste"
-                                    class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
+                                    <input type="text" id="website" name="website"
+                                    class="form-input w-full px-4 py-2 rounded-lg border border-gray-400">
                                 </div>
                             </div>
-
+<br>
                             <button type="submit"
                                 class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">
                                 Register

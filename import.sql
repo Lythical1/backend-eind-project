@@ -44,6 +44,8 @@ CREATE TABLE IF NOT EXISTS employee_postings (
   user_id INT NOT NULL,
   qualification VARCHAR(255) NOT NULL,
   bio TEXT NOT NULL,
+  looking_for VARCHAR(255) NOT NULL,
+  available_hours INT NOT NULL,
   FOREIGN KEY (user_id) REFERENCES users(id)
 );
 

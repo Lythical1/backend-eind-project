@@ -5,10 +5,14 @@ include_once "connector.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
     $email = $_POST['email'];
+    $phone_number = $_POST['phone_number'];
     $user_type = $_POST['user_type'];
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
     $company_name = $_POST['company_name'];
+    $company_size = $_POST['company_size'];
+    $industry = $_POST['industry'];
+    $website = $_POST['website'];
 
     try {
         // Prepare the SQL statement
