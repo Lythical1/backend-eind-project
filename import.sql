@@ -48,13 +48,3 @@ CREATE TABLE IF NOT EXISTS employee_postings (
   user_id INT NOT NULL,
   FOREIGN KEY (user_id) REFERENCES users(id)
 );
-
-CREATE TABLE IF NOT EXISTS company_reviews (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  company_id INT NOT NULL,
-  reviewer_user_id INT NOT NULL,
-  rating INT,
-  review_text TEXT,
-  FOREIGN KEY (company_id) REFERENCES users(id),
-  FOREIGN KEY (reviewer_user_id) REFERENCES users(id)
-);

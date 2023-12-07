@@ -6,13 +6,13 @@
             </div>
             <div class="hidden sm:ml-6 sm:flex sm:items-center">
                 <a href="index.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-500 focus:outline-none focus:text-gray-500">Home</a>
-                <?php if (isset($_SESSION['type_of_user']) && $_SESSION['type_of_user'] == 'employee') { ?>
+                <?php if (isset($_SESSION['type_of_user']) && ($_SESSION['type_of_user'] == 'employee' || $_SESSION['type_of_user'] == 'admin')) { ?>
                     <a href="find_job.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-500 focus:outline-none focus:text-gray-500">Find Jobs</a>
                     <a href="profile.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-500 focus:outline-none focus:text-gray-500">Profile</a>
                     <a href="my_applications.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-500 focus:outline-none focus:text-gray-500">My Applications</a>
                     <a href="create_application.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-500 focus:outline-none focus:text-gray-500">Create Application</a>
                 <?php } ?>
-                <?php if (isset($_SESSION['type_of_user']) && $_SESSION['type_of_user'] == 'company') { ?>
+                <?php if (isset($_SESSION['type_of_user']) && ($_SESSION['type_of_user'] == 'company' || $_SESSION['type_of_user'] == 'admin')) { ?>
                     <a href="create_job.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-500 focus:outline-none focus:text-gray-500">Create Job</a>
                     <a href="find_employee.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-500 focus:outline-none focus:text-gray-500">Find Employees</a>
                 <?php } ?>
