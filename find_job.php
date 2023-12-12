@@ -89,7 +89,7 @@ $result = $pdo->query($sql);
                                     <?= $row["field"]; ?>
                                 </p>
                                 <p class="text-gray-700 mb-2">
-                                    <?= $row["job_type"]; ?>
+                                    <?= $row["contract_type"]; ?>
                                 </p>
                                 <p class="text-gray-700 mb-2">
                                     <?= $row["location"]; ?>
