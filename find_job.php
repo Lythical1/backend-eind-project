@@ -75,7 +75,7 @@ $result = $pdo->query($sql);
             <div class="bg-white rounded-lg shadow-lg p-4 mb-4">
                 <?php
                 try {
-                    $sql = "SELECT id, company_name, field, job_type, location, hours_per_week, hourly_rate, description FROM job_postings";
+                    $sql = "SELECT id, company_name, field, job_type, location, hours_per_week, hourly_rate, description, start_date FROM job_postings";
                     $result = $pdo->query($sql);
                     // Loop through the job information and create detailed job information for each job
                     if ($result->rowCount() > 0) {
@@ -95,6 +95,9 @@ $result = $pdo->query($sql);
                                     <?= $row["location"]; ?>
                                 </p>
                                 <p class="text-gray-700 mb-2">
+                                    <?= $row["start_date"]; ?>
+                                </p>
+                                <p class="text-gray-700 mb-2">
                                     <?= $row["hours_per_week"]; ?> hours per week
                                 </p>
                                 <p class="text-gray-700 mb-2">$
@@ -102,6 +105,13 @@ $result = $pdo->query($sql);
                                 </p>
                                 <p class="text-gray-700 mb-2">
                                     <?= $row["description"]; ?>
+                                </p>
+                                <p class="text-gray-700 mb-2">
+                                    <?php if (isset($_SESSION['type_of_user']) && ($_SESSION['type_of_user'] == 'employee' || $_SESSION['type_of_user'] == 'admin')) { ?>
+                                        <a href="apply.php?id=<?= $row["id"]; ?>"
+                                            class="bg-blue-500 text-white px-4 py-2 rounded-lg">Apply</a>
+                                    <?php } ?>
+                                </p>
                             </div>
                             <?php
                         }

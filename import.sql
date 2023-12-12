@@ -36,6 +36,7 @@ CREATE TABLE IF NOT EXISTS job_postings (
   hourly_rate DECIMAL(10, 2) NOT NULL,
   description TEXT NOT NULL,
   user_id INT NOT NULL,
+  start_date DATE NOT NULL,
   FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
