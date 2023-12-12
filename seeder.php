@@ -11,7 +11,7 @@ $adminPassword = password_hash('admin', PASSWORD_DEFAULT);
 $adminType = 'admin';
 
 $insertAdminUser = $pdo->prepare("
-    INSERT INTO users (email, password, type_of_user)
+    INSERT INTO users (email, company_name, password, type_of_user)
     VALUES (:email, :company_name, :password, :type_of_user)
 ");
 
