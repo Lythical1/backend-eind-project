@@ -26,9 +26,18 @@ $date = date('Y-m-d');
                         <form method="POST" action="job_offer_creation_handler.php">
 
                             <div class="mb-4">
-                                <label for="contract_type" class="block mb-2 font-semibold text-gray-700">Contract type:</label>
-                                <input type="text" id="contract_type" name="contract_type"
-                                    class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
+                                <label for="contract_type" class="block mb-2 font-semibold text-gray-700">Contract
+                                    type:</label>
+                                <select id="contract_type" name="contract_type"
+                                    class="form-select w-full px-4 py-2 rounded-lg border border-gray-400" required>
+                                    <option value="">Select contract type</option>
+                                    <option value="full-time">Full-time</option>
+                                    <option value="part-time">Part-time</option>
+                                    <option value="freelance">Freelance</option>
+                                    <option value="internship">Internship</option>
+                                    <option value="temporary">Temporary</option>
+                                    <option value="volunteer">Volunteer</option>
+                                </select>
                             </div>
 
                             <div>
@@ -40,13 +49,14 @@ $date = date('Y-m-d');
                             <div class="mb-4">
                                 <label for="hours_per_week" class="block mb-2 font-semibold text-gray-700">Hours per
                                     week:</label>
-                                <input type="number" id="hours_per_week" name="hours_per_week"
+                                <input type="number" id="hours_per_week" name="hours_per_week" min="0" max="80"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
                             </div>
 
                             <div>
-                                <label for="hourly_rate" class="block mb-2 font-semibold text-gray-700">Salary per hour:</label>
-                                <input type="number" id="hourly_rate" name="hourly_rate" min="0" max="80"
+                                <label for="hourly_rate" class="block mb-2 font-semibold text-gray-700">Salary per
+                                    hour:</label>
+                                <input type="number" id="hourly_rate" name="hourly_rate"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
                             </div>
 
@@ -59,7 +69,8 @@ $date = date('Y-m-d');
                             <div class="mb-4">
                                 <label for="start_date" class="block mb-2 font-semibold text-gray-700">Start
                                     date:</label>
-                                <input type="date" id="start_date" name="start_date" value="<?= $date ?>" min="<?= $date ?>"
+                                <input type="date" id="start_date" name="start_date" value="<?= $date ?>"
+                                    min="<?= $date ?>"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
                             </div>
 
