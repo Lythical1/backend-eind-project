@@ -2,7 +2,16 @@
 
 include "connector.php";
 
-$company_name = $_POST[''];
+$user_id = $_SESSION['user_id'];
+
+$sql = "SELECT company_name FROM users WHERE id = $user_id";
+
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+
+$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+$company_name = $result['company_name'];
 
 $job_type = $_POST['job_type'];
 $field = $_POST['field'];
@@ -12,7 +21,8 @@ $location = $_POST['location'];
 $start_date = $_POST['start_date'];
 $description = $_POST['description'];
 
-$sql = "INSERT INTO job_postings (job_type, field, hours_per_week, hourly_rate, location, start_date, description) VALUES ('$job_type', '$field', '$hours_per_week', '$hourly_rate', '$location', '$start_date', '$description')";
+$sql = "INSERT INTO job_postings (company_name, job_type, field, hours_per_week, hourly_rate, location, start_date, description, user_id)
+    VALUES ('$company_name', '$job_type', '$field', '$hours_per_week', '$hourly_rate', '$location', '$start_date', '$description', '$user_id')";
 $pdo->exec($sql);
 
 header("Location: create_job.php");

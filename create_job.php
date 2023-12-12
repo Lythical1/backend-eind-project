@@ -27,32 +27,32 @@ $date = date('Y-m-d');
 
                             <div class="mb-4">
                                 <label for="job_type" class="block mb-2 font-semibold text-gray-700">Job type:</label>
-                                <input type="job_type" id="job_type" name="job_type"
+                                <input type="text" id="job_type" name="job_type"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
                             </div>
 
                             <div>
                                 <label for="field" class="block mb-2 font-semibold text-gray-700">Field:</label>
-                                <input type="field" id="field" name="field"
+                                <input type="text" id="field" name="field"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
                             </div>
 
                             <div class="mb-4">
                                 <label for="hours_per_week" class="block mb-2 font-semibold text-gray-700">Hours per
                                     week:</label>
-                                <input type="hours_per_week" id="hours_per_week" name="hours_per_week"
+                                <input type="number" id="hours_per_week" name="hours_per_week"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
                             </div>
 
                             <div>
                                 <label for="hourly_rate" class="block mb-2 font-semibold text-gray-700">Salary per hour:</label>
-                                <input type="hourly_rate" id="hourly_rate" name="hourly_rate"
+                                <input type="number" id="hourly_rate" name="hourly_rate"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
                             </div>
 
                             <div class="mb-4">
                                 <label for="location" class="block mb-2 font-semibold text-gray-700">Location:</label>
-                                <input type="location" id="location" name="location"
+                                <input type="text" id="location" name="location"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
                             </div>
 
@@ -66,7 +66,7 @@ $date = date('Y-m-d');
                             <div class="mb-4">
                                 <label for="description" class="block mb-2 font-semibold text-gray-700">Job
                                     description:</label>
-                                <input type="description" id="description" name="description"
+                                <input type="text" id="description" name="description"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
                             </div>
 
