@@ -2,7 +2,7 @@
 
 include_once "connector.php";
 
-$sql = "SELECT id, company_name, field, job_type, location, hours_per_week, hourly_rate, description FROM job_postings";
+$sql = "SELECT id, company_name, field, contract_type, location, hours_per_week, hourly_rate, description FROM job_postings";
 $result = $pdo->query($sql);
 
 ?>
@@ -53,7 +53,7 @@ $result = $pdo->query($sql);
                             <?= $row["field"]; ?>
                         </p>
                         <p class="text-gray-700 mb-2">
-                            <?= $row["job_type"]; ?>
+                            <?= $row["contract_type"]; ?>
                         </p>
                         <p class="text-gray-700 mb-2">
                             <?= $row["location"]; ?>
@@ -75,7 +75,7 @@ $result = $pdo->query($sql);
             <div class="bg-white rounded-lg shadow-lg p-4 mb-4">
                 <?php
                 try {
-                    $sql = "SELECT id, company_name, field, job_type, location, hours_per_week, hourly_rate, description, start_date FROM job_postings";
+                    $sql = "SELECT id, company_name, field, contract_type, location, hours_per_week, hourly_rate, description, start_date FROM job_postings";
                     $result = $pdo->query($sql);
                     // Loop through the job information and create detailed job information for each job
                     if ($result->rowCount() > 0) {

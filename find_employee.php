@@ -2,7 +2,7 @@
 
 include_once "connector.php";
 
-$sql = "SELECT id, qualifications, bio, looking_for, available_hours FROM employee_postings";
+$sql = "SELECT id, qualifications, description, looking_for, available_hours FROM employee_postings";
 $result = $pdo->query($sql);
 
 ?>
@@ -69,7 +69,7 @@ $result = $pdo->query($sql);
             <div class="bg-white rounded-lg shadow-lg p-4 mb-4">
                 <?php
                 try {
-                    $sql = "SELECT id, qualifications, bio, looking_for, available_hours FROM employee_postings";
+                    $sql = "SELECT id, qualifications, description, looking_for, available_hours FROM employee_postings";
                     $result = $pdo->query($sql);
                     // Loop through the job information and create detailed job information for each job
                     if($result->rowCount() > 0) {
@@ -86,7 +86,7 @@ $result = $pdo->query($sql);
                                     <?= $row["available_hours"]; ?>
                                 </p>
                                 <p class="text-gray-700 mb-2">
-                                    <?= $row["bio"]; ?>
+                                    <?= $row["description"]; ?>
                                 </p>
                             </div>
                             <?php
