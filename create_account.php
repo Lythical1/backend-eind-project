@@ -99,10 +99,10 @@ session_start();
                                 <div>
                                     <label for="webiste" class="block mb-2 font-semibold text-gray-700">Webiste:</label>
                                     <input type="text" id="website" name="website"
-                                    class="form-input w-full px-4 py-2 rounded-lg border border-gray-400">
+                                        class="form-input w-full px-4 py-2 rounded-lg border border-gray-400">
                                 </div>
                             </div>
-<br>
+                            <br>
                             <button type="submit"
                                 class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">
                                 Register
