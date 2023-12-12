@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+$date = date('Y-m-d');
 ?>
 
 <!DOCTYPE html>
@@ -23,14 +23,14 @@ session_start();
                         <h4 class="text-lg font-semibold text-gray-700">Create Job offer</h4>
                     </div>
                     <div class="p-6">
-                        <form method="POST" action="account_creation_handler.php">
+                        <form method="POST" action="job_offer_creation_handler.php">
 
                             <div class="mb-4">
                                 <label for="job_type" class="block mb-2 font-semibold text-gray-700">Job type:</label>
                                 <input type="job_type" id="job_type" name="job_type"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
                             </div>
-                            
+
                             <div>
                                 <label for="field" class="block mb-2 font-semibold text-gray-700">Field:</label>
                                 <input type="field" id="field" name="field"
@@ -45,7 +45,7 @@ session_start();
                             </div>
 
                             <div>
-                                <label for="hourly_rate" class="block mb-2 font-semibold text-gray-700">Salary:</label>
+                                <label for="hourly_rate" class="block mb-2 font-semibold text-gray-700">Salary per hour:</label>
                                 <input type="hourly_rate" id="hourly_rate" name="hourly_rate"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
                             </div>
@@ -59,10 +59,9 @@ session_start();
                             <div class="mb-4">
                                 <label for="start_date" class="block mb-2 font-semibold text-gray-700">Start
                                     date:</label>
-                                <input type="start_date" id="start_date" name="start_date"
+                                <input type="date" id="start_date" name="start_date" value="<?= $date ?>" min="<?= $date ?>"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
                             </div>
-
 
                             <div class="mb-4">
                                 <label for="description" class="block mb-2 font-semibold text-gray-700">Job
