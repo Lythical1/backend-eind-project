@@ -7,7 +7,7 @@ VALUES
   ('Master in Marketing', 'Creative and detail-oriented marketing professional with a passion for digital marketing strategies.', 'Open to marketing roles in dynamic companies.', 25, 1),
   ('Ph.D. in Data Science', 'Data scientist with a strong background in machine learning and data analysis.', 'Looking for challenging projects in data science.', 20, 1);
 
-INSERT INTO job_postings (company_name, field, job_type, location, hours_per_week, hourly_rate, description, user_id, start_date)
+INSERT INTO job_postings (company_name, field, contract_type, location, hours_per_week, hourly_rate, description, user_id, start_date)
 VALUES
   ('ABC Company', 'Software Development', 'Full-time', 'City A', 40, 30.00, 'Looking for experienced software developers.', 1, '2022-01-01'),
   ('XYZ Corporation', 'Data Analysis', 'Part-time', 'City B', 20, 25.50, 'Data analyst position for a growing team.', 1, '2022-02-01'),

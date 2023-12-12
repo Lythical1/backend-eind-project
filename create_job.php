@@ -26,8 +26,8 @@ $date = date('Y-m-d');
                         <form method="POST" action="job_offer_creation_handler.php">
 
                             <div class="mb-4">
-                                <label for="job_type" class="block mb-2 font-semibold text-gray-700">Job type:</label>
-                                <input type="text" id="job_type" name="job_type"
+                                <label for="contract_type" class="block mb-2 font-semibold text-gray-700">Contract type:</label>
+                                <input type="text" id="contract_type" name="contract_type"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
                             </div>
 
@@ -46,7 +46,7 @@ $date = date('Y-m-d');
 
                             <div>
                                 <label for="hourly_rate" class="block mb-2 font-semibold text-gray-700">Salary per hour:</label>
-                                <input type="number" id="hourly_rate" name="hourly_rate"
+                                <input type="number" id="hourly_rate" name="hourly_rate" min="0" max="80"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
                             </div>
 
