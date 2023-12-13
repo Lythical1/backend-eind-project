@@ -10,8 +10,6 @@ DROP TABLE IF EXISTS job_postings;
 
 DROP TABLE IF EXISTS users;
 
-DROP TABLE IF EXISTS company_reviews;
-
 CREATE TABLE IF NOT EXISTS users (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   email VARCHAR(255) NOT NULL,
@@ -43,9 +41,11 @@ CREATE TABLE IF NOT EXISTS job_postings (
 CREATE TABLE IF NOT EXISTS employee_postings (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   location_preference VARCHAR(255) NOT NULL,
-  available_hours INT NOT NULL,
+  contract_type VARCHAR(255) NOT NULL,
   looking_for VARCHAR(255) NOT NULL,
   qualifications VARCHAR(255) NOT NULL,
+  available_hours INT NOT NULL,
+  start_date DATE NOT NULL,
   languages_spoken VARCHAR(255),
   skills VARCHAR(255) NOT NULL,
   previous_job_titles TEXT,

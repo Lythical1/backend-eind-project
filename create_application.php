@@ -37,11 +37,19 @@ $date = date('Y-m-d');
                                 </select>
                             </div>
 
-                            <div>
-                                <label for="available_hours" class="block mb-2 font-semibold text-gray-700">Available
-                                    hours:</label>
-                                <input type="text" id="available_hours" name="available_hours"
-                                    class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
+                            <div class="mb-4">
+                                <label for="contract_type" class="block mb-2 font-semibold text-gray-700">Contract
+                                    type:</label>
+                                <select id="contract_type" name="contract_type"
+                                    class="form-select w-full px-4 py-2 rounded-lg border border-gray-400" required>
+                                    <option value="">Select contract type</option>
+                                    <option value="full-time">Full-time</option>
+                                    <option value="part-time">Part-time</option>
+                                    <option value="freelance">Freelance</option>
+                                    <option value="internship">Internship</option>
+                                    <option value="temporary">Temporary</option>
+                                    <option value="volunteer">Volunteer</option>
+                                </select>
                             </div>
 
                             <div>
@@ -58,8 +66,24 @@ $date = date('Y-m-d');
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
                             </div>
 
+                            <div class="mb-4">
+                                <label for="start_date" class="block mb-2 font-semibold text-gray-700">Start
+                                    date:</label>
+                                <input type="date" id="start_date" name="start_date" value="<?= $date ?>"
+                                    min="<?= $date ?>"
+                                    class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
+                            </div>
+
                             <div>
-                                <label for="languages_spoken" class="block mb-2 font-semibold text-gray-700">Spoken languages:</label>
+                                <label for="available_hours" class="block mb-2 font-semibold text-gray-700">Available
+                                    hours:</label>
+                                <input type="text" id="available_hours" name="available_hours"
+                                    class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
+                            </div>
+
+                            <div>
+                                <label for="languages_spoken" class="block mb-2 font-semibold text-gray-700">Spoken
+                                    languages:</label>
                                 <input type="text" id="languages_spoken" name="languages_spoken"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
                             </div>
@@ -71,19 +95,22 @@ $date = date('Y-m-d');
                             </div>
 
                             <div>
-                                <label for="previous_titles" class="block mb-2 font-semibold text-gray-700">Previous job titles:</label>
+                                <label for="previous_titles" class="block mb-2 font-semibold text-gray-700">Previous job
+                                    titles:</label>
                                 <input type="text" id="previous_titles" name="previous_titles"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
                             </div>
 
                             <div>
-                                <label for="previous_companies" class="block mb-2 font-semibold text-gray-700">Previous companies:</label>
+                                <label for="previous_companies" class="block mb-2 font-semibold text-gray-700">Previous
+                                    companies:</label>
                                 <input type="text" id="previous_companies" name="previous_companies"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
                             </div>
 
                             <div>
-                                <label for="employment_duration_years" class="block mb-2 font-semibold text-gray-700">Total years of employment:</label>
+                                <label for="employment_duration_years"
+                                    class="block mb-2 font-semibold text-gray-700">Total years of employment:</label>
                                 <input type="text" id="employment_duration_years" name="employment_duration_years"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
                             </div>
@@ -95,11 +122,12 @@ $date = date('Y-m-d');
                             </div>
 
                             <div>
-                                <label for="linkedin_url" class="block mb-2 font-semibold text-gray-700">LinkedIN Url:</label>
+                                <label for="linkedin_url" class="block mb-2 font-semibold text-gray-700">LinkedIN
+                                    Url:</label>
                                 <input type="text" id="linkedin_url" name="linkedin_url"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
                             </div>
-                            
+
                             <div>
                                 <label for="description"
                                     class="block mb-2 font-semibold text-gray-700">Description:</label>
