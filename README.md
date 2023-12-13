@@ -1,6 +1,6 @@
 # Job Application Website
 
-This is a job application website built using PHP, Bootstrap, and XAMPP.
+This is a job application website built using PHP, Tailwind, and XAMPP.
 
 ## Requirements
 
@@ -22,7 +22,7 @@ This is a job application website built using PHP, Bootstrap, and XAMPP.
 ## Technologies Used
 
 - PHP
-- Bootstrap
+- Tailwind
 - XAMPP
 
 ## Contributing
