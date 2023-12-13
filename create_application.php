@@ -77,14 +77,7 @@ $date = date('Y-m-d');
                             <div>
                                 <label for="available_hours" class="block mb-2 font-semibold text-gray-700">Available
                                     hours:</label>
-                                <input type="text" id="available_hours" name="available_hours"
-                                    class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
-                            </div>
-
-                            <div>
-                                <label for="languages_spoken" class="block mb-2 font-semibold text-gray-700">Spoken
-                                    languages:</label>
-                                <input type="text" id="languages_spoken" name="languages_spoken"
+                                <input type="number" id="available_hours" name="available_hours" min="1" max="80"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
                             </div>
 
@@ -95,34 +88,42 @@ $date = date('Y-m-d');
                             </div>
 
                             <div>
-                                <label for="previous_titles" class="block mb-2 font-semibold text-gray-700">Previous job
+                                <label for="languages_spoken" class="block mb-2 font-semibold text-gray-700">Spoken
+                                    languages:</label>
+                                <input type="text" id="languages_spoken" name="languages_spoken"
+                                class="form-input w-full px-4 py-2 rounded-lg border border-gray-400">
+                            </div>
+                            
+                            <div>
+                                <label for="previous_job_titles" class="block mb-2 font-semibold text-gray-700">Previous
+                                    job
                                     titles:</label>
-                                <input type="text" id="previous_titles" name="previous_titles"
-                                    class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
+                                <input type="text" id="previous_job_titles" name="previous_job_titles"
+                                    class="form-input w-full px-4 py-2 rounded-lg border border-gray-400">
                             </div>
 
                             <div>
                                 <label for="previous_companies" class="block mb-2 font-semibold text-gray-700">Previous
                                     companies:</label>
                                 <input type="text" id="previous_companies" name="previous_companies"
-                                    class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
+                                    class="form-input w-full px-4 py-2 rounded-lg border border-gray-400">
                             </div>
 
                             <div>
                                 <label for="employment_duration_years"
                                     class="block mb-2 font-semibold text-gray-700">Total years of employment:</label>
-                                <input type="text" id="employment_duration_years" name="employment_duration_years"
-                                    class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
+                                <input type="number" id="employment_duration_years" name="employment_duration_years"
+                                    class="form-input w-full px-4 py-2 rounded-lg border border-gray-400">
                             </div>
 
                             <div>
                                 <label for="education" class="block mb-2 font-semibold text-gray-700">Education:</label>
                                 <input type="text" id="education" name="education"
-                                    class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
+                                    class="form-input w-full px-4 py-2 rounded-lg border border-gray-400">
                             </div>
 
                             <div>
-                                <label for="linkedin_url" class="block mb-2 font-semibold text-gray-700">LinkedIN
+                                <label for="linkedin_url" class="block mb-2 font-semibold text-gray-700">LinkedIn
                                     Url:</label>
                                 <input type="text" id="linkedin_url" name="linkedin_url"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>

@@ -40,19 +40,21 @@ CREATE TABLE IF NOT EXISTS job_postings (
 
 CREATE TABLE IF NOT EXISTS employee_postings (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  first_name VARCHAR(255) NOT NULL,
+  last_name VARCHAR(255) NOT NULL,
   location_preference VARCHAR(255) NOT NULL,
   contract_type VARCHAR(255) NOT NULL,
   looking_for VARCHAR(255) NOT NULL,
   qualifications VARCHAR(255) NOT NULL,
   available_hours INT NOT NULL,
   start_date DATE NOT NULL,
-  languages_spoken VARCHAR(255),
   skills VARCHAR(255) NOT NULL,
+  languages_spoken VARCHAR(255),
   previous_job_titles TEXT,
   previous_companies TEXT,
   employment_duration_years INT,
   education VARCHAR(255),
-  linkedin_url VARCHAR(255),
+  linkedin_url VARCHAR(255) NOT NULL,
   description TEXT NOT NULL,
   user_id INT NOT NULL,
   FOREIGN KEY (user_id) REFERENCES users(id)
