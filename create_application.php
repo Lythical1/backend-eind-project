@@ -8,7 +8,7 @@ $date = date('Y-m-d');
 <html>
 
 <head>
-    <title>Create your Job offer</title>
+    <title>Create your Application</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.7/tailwind.min.css">
 </head>
 
@@ -20,7 +20,7 @@ $date = date('Y-m-d');
             <div class="w-full md:w-1/2">
                 <div class="bg-white rounded-lg shadow-lg">
                     <div class="px-6 py-4 border-b border-gray-200">
-                        <h4 class="text-lg font-semibold text-gray-700">Create Job offer</h4>
+                        <h4 class="text-lg font-semibold text-gray-700">Create Application</h4>
                     </div>
                     <div class="p-6">
                         <form method="POST" action="application_creation_handler.php">
