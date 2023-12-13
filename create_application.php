@@ -91,9 +91,9 @@ $date = date('Y-m-d');
                                 <label for="languages_spoken" class="block mb-2 font-semibold text-gray-700">Spoken
                                     languages:</label>
                                 <input type="text" id="languages_spoken" name="languages_spoken"
-                                class="form-input w-full px-4 py-2 rounded-lg border border-gray-400">
+                                    class="form-input w-full px-4 py-2 rounded-lg border border-gray-400">
                             </div>
-                            
+
                             <div>
                                 <label for="previous_job_titles" class="block mb-2 font-semibold text-gray-700">Previous
                                     job
@@ -113,7 +113,8 @@ $date = date('Y-m-d');
                                 <label for="employment_duration_years"
                                     class="block mb-2 font-semibold text-gray-700">Total years of employment:</label>
                                 <input type="number" id="employment_duration_years" name="employment_duration_years"
-                                    class="form-input w-full px-4 py-2 rounded-lg border border-gray-400">
+                                    class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" min="0"
+                                    max="60">
                             </div>
 
                             <div>
@@ -125,8 +126,9 @@ $date = date('Y-m-d');
                             <div>
                                 <label for="linkedin_url" class="block mb-2 font-semibold text-gray-700">LinkedIn
                                     Url:</label>
-                                <input type="text" id="linkedin_url" name="linkedin_url"
+                                <input type="url" id="linkedin_url" name="linkedin_url" placeholder="https://www.linkedin.com/in/"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
+                                <small class="text-red-600" id="linkedinError"></small>
                             </div>
 
                             <div>
@@ -147,6 +149,20 @@ $date = date('Y-m-d');
             </div>
         </div>
     </div>
+    <script>
+    document.getElementById("linkedin_url").addEventListener("input", function () {
+        var linkedinUrlInput = this.value.trim();
+        var linkedinPattern = /^https:\/\/www\.linkedin\.com\/in\/[a-zA-Z0-9_-]+\/?$/;
+
+        var errorElement = document.getElementById("linkedinError");
+
+        if (linkedinUrlInput === "" || linkedinPattern.test(linkedinUrlInput)) {
+            errorElement.textContent = "";
+        } else {
+            errorElement.textContent = "Please enter a valid LinkedIn URL.";
+        }
+    });
+</script>
 </body>
 
 </html>

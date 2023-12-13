@@ -40,8 +40,9 @@ session_start();
                             <div>
                                 <label for="phone_number" class="block mb-2 font-semibold text-gray-700">Phone
                                     Number:</label>
-                                <input type="tel" id="phone_number" name="phone_number" pattern="[0-9]{2} [0-9]{8}"
+                                <input type="tel" id="phone_number" name="phone_number"
                                     class="form-input w-full px-4 py-2 rounded-lg border border-gray-400" required>
+                                <small class="text-red-600" id="phoneError"></small>
                             </div>
 
                             <div class="mb-4">
@@ -129,6 +130,18 @@ session_start();
             } else {
                 employeeFields.classList.add('hidden');
                 companyFields.classList.add('hidden');
+            }
+        });
+        document.getElementById("phone_number").addEventListener("input", function () {
+            var phoneNumberInput = this.value.trim();
+            var phonePattern = /^[0-9]{2} [0-9]{8}$/;
+
+            var errorElement = document.getElementById("phoneError");
+
+            if (phoneNumberInput === "" || phonePattern.test(phoneNumberInput)) {
+                errorElement.textContent = "";
+            } else {
+                errorElement.textContent = "Please enter a valid phone number (e.g., 12 34567890).";
             }
         });
     </script>
