@@ -107,10 +107,6 @@ $result = $pdo->query($sql);
                                     <?= $row["description"]; ?>
                                 </p>
                                 <p class="text-gray-700 mb-2">
-                                    <?php if (isset($_SESSION['type_of_user']) && ($_SESSION['type_of_user'] == 'employee' || $_SESSION['type_of_user'] == 'admin')) { ?>
-                                        <a href="apply.php?id=<?= $row["id"]; ?>"
-                                            class="bg-blue-500 text-white px-4 py-2 rounded-lg">Apply</a>
-                                    <?php } ?>
                                 </p>
                             </div>
                             <?php
