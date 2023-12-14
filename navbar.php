@@ -11,13 +11,11 @@
                     <a href="find_job.php"
                         class="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-500 focus:outline-none focus:text-gray-500">Find
                         Jobs</a>
-                    <a href="profile.php"
-                        class="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-500 focus:outline-none focus:text-gray-500">Profile</a>
                     <a href="create_application.php"
                         class="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-500 focus:outline-none focus:text-gray-500">Create
                         Application</a>
                 <?php } ?>
-                <?php if (isset($_SESSION['type_of_user'])){ ?>
+                <?php if (isset($_SESSION['type_of_user'])) { ?>
                     <a href="my_applications.php"
                         class="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-500 focus:outline-none focus:text-gray-500">My
                         Applications</a>
