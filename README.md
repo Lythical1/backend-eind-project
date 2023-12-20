@@ -12,7 +12,9 @@ This is a job application website built using PHP, Tailwind, and XAMPP.
 1. Clone this repository to your local machine
 2. Move the cloned repository to the `htdocs` folder in your XAMPP installation directory
 3. Start the Apache and MySQL servers in XAMPP
-4. Open a web browser and navigate to `http://localhost/backend-eind-project`
+4. Open a terminal and navigate to `~\Backend-Eindproject\Almost-there-018ba971-018ba971\`
+5. Run `php seeder.php` to create the database and seed it with dummy data (username: `admin@admin.com`, password: `admin`)
+6. Open a web browser and navigate to `http://localhost/backend-eind-project`
 
 ## Usage
 
