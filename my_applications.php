@@ -21,6 +21,8 @@ $user = $user_statement->fetch(PDO::FETCH_ASSOC);
 // Determine the user type (company or employee)
 $user_type = $user['type_of_user'];
 
+$sql = "SELECT id, company_name, field, contract_type, location, hours_per_week, hourly_rate, description FROM job_postings WHERE user_id = $user_id";
+$result = $pdo->query($sql);
 
 // Display the job postings
 ?>
