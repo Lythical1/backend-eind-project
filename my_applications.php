@@ -21,8 +21,18 @@ $user = $user_statement->fetch(PDO::FETCH_ASSOC);
 // Determine the user type (company or employee)
 $user_type = $user['type_of_user'];
 
-$sql = "SELECT id, company_name, field, contract_type, location, hours_per_week, hourly_rate, description FROM job_postings WHERE user_id = $user_id";
+$sql = "SELECT id, qualifications, location_preference, contract_type, looking_for, available_hours, start_date, skills, languages_spoken, previous_job_titles, previous_companies, employment_duration_years, education, linkedin_url, description FROM employee_postings WHERE user_id = $user_id";
 $result = $pdo->query($sql);
+
+if (isset($_POST['delete_application'])) {
+    $applicationId = $_POST['application_id'];
+
+    $sql = "DELETE FROM employee_postings WHERE id = $applicationId";
+    $pdo->query($sql);
+
+    echo "<meta http-equiv='refresh' content='0'>";
+    exit();
+}
 
 // Display the job postings
 ?>
@@ -64,36 +74,6 @@ $result = $pdo->query($sql);
                     <?php endwhile;
                 endif;
             } ?>
-            <?php if ($user_type == 'company' || $user_type == 'admin') { ?>
-                <div class="w-1/3 p-4" style="overflow:scroll; height:92vh; margin-left:50px;">
-                    <?php if ($result->rowCount() > 0): ?>
-                        <?php while ($row = $result->fetch(PDO::FETCH_ASSOC)): ?>
-                            <div class="bg-white rounded-lg shadow-lg p-4 mb-4 cursor-pointer"
-                                onclick="showDetails(<?= $row['id']; ?>)" x-data="{ showDetails: false }">
-                                <h2 class="text-lg font-bold mb-2">
-                                    <?= $row["company_name"]; ?>
-                                </h2>
-                                <p class="text-gray-700 mb-2">
-                                    <?= $row["field"]; ?>
-                                </p>
-                                <p class="text-gray-700 mb-2">
-                                    <?= $row["contract_type"]; ?>
-                                </p>
-                                <p class="text-gray-700 mb-2">
-                                    <?= $row["location"]; ?>
-                                </p>
-                                <p class="text-gray-700 mb-2">
-                                    <?= $row["hours_per_week"]; ?> hours per week
-                                </p>
-                                <button class="bg-blue-500 text-white px-4 py-2 rounded-lg" @click="showDetails = true">View
-                                    Details</button>
-                            </div>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
-
-                </div>
-
-            <?php } ?>
         </div>
         <!-- Right div with detailed job information -->
         <div class="w-2/3 p-4" x-show="showDetails"
@@ -121,6 +101,17 @@ $result = $pdo->query($sql);
                                 <p class="text-gray-700 mb-2">
                                     <?= $row["description"]; ?>
                                 </p>
+                                <p class="text-gray-700 mb-2">
+                                    <?= $row["looking_for"]; ?>
+                                </p>
+                                <p class="text-gray-700 mb-2">
+                                    <?= $row["available_hours"]; ?> hours
+                                </p>
+                                <form method="POST" action="my_applications.php">
+                                    <input type="hidden" name="application_id" value="<?= $row["id"]; ?>">
+                                    <button type="submit" name="delete_application"
+                                        class="bg-red-500 text-white px-4 py-2 rounded-lg">Delete Application</button>
+                                </form>
                             </div>
                             <?php
                         }
@@ -131,37 +122,6 @@ $result = $pdo->query($sql);
                 ?>
             </div>
         </div>
-    </div>
-    <div>
-        <?php foreach ($postings as $posting): ?>
-            <div id="job-details-<?= $posting["id"]; ?>" class="job-details" style="display: none;">
-                <h2 class="text-lg font-bold mb-2">
-                    <?= $posting["company_name"]; ?>
-                </h2>
-                <p class="text-gray-700 mb-2">
-                    <?= $posting["field"]; ?>
-                </p>
-                <p class="text-gray-700 mb-2">
-                    <?= $posting["contract_type"]; ?>
-                </p>
-                <p class="text-gray-700 mb-2">
-                    <?= $posting["location"]; ?>
-                </p>
-                <p class="text-gray-700 mb-2">
-                    <?= $posting["start_date"]; ?>
-                </p>
-                <p class="text-gray-700 mb-2">
-                    <?= $posting["hours_per_week"]; ?> hours per week
-                </p>
-                <p class="text-gray-700 mb-2">
-                    $
-                    <?= $posting["hourly_rate"]; ?> per hour
-                </p>
-                <p class="text-gray-700 mb-2">
-                    <?= $posting["description"]; ?>
-                </p>
-            </div>
-        <?php endforeach; ?>
     </div>
 
     <script>
