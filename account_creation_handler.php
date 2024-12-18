@@ -43,7 +43,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Redirect the user to a success page or do something else
         header("Location: index.php");
         exit();
-
     } catch (\PDOException $e) {
         // Handle any database errors
         echo "Database Error: " . $e->getMessage();
